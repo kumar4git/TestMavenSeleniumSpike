@@ -23,7 +23,7 @@ public class BaseTest
 	@BeforeMethod
 	public void openApp(String browser, String url, String timeout) 
 	{
-		Reporter.log("Open the browser: "+browser, true);
+		/* Reporter.log("Open the browser: "+browser, true); */
 		if (browser.equalsIgnoreCase("chrome"))
 		{
 		driver=new ChromeDriver();
@@ -31,9 +31,9 @@ public class BaseTest
 		else {
 			driver=new FirefoxDriver();
 		}
-		Reporter.log("enter the url: "+url, true);
+		/* Reporter.log("enter the url: "+url, true); */
 		driver.get(url);
-		Reporter.log("Maximize the browser", true);
+		/* Reporter.log("Maximize the browser", true); */
 		driver.manage().window().maximize();
 		// int intTimeout = Integer.parseInt(timeout);  --> converting string to int value
 		long intTimeout= Long.parseLong(timeout);
